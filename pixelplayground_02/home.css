@@ -1,0 +1,245 @@
+/* Gaya untuk Navigasi */
+body {
+    font-family: monospace, fantasy;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2e;
+}
+  
+.main-title {
+    font-style: normal;
+    font-size: 48px; /* Ukuran font besar */
+    font-weight: bold;
+    text-align: center; /* Memastikan teks selalu di tengah */
+    margin: 30px;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(172, 152, 216);
+}
+/* Gaya untuk Friends Section */
+
+
+/* Gaya untuk Game Review Section */
+
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Memberikan jarak antara game-card */
+  justify-content: flex-start;
+  color: white;
+}
+.review-section {
+  padding: 20px;
+    background-color: #2d2d46;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.review-section h2 {
+    width: 100%; /* Membuat judul mengambil seluruh lebar kontainer */
+    text-align: left; /* Memastikan judul berada di kiri */
+    margin-bottom: none; /* Menambahkan jarak antara judul dan game card */
+
+}
+.game-card {
+    background-color: #e6e6ef;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 190px;
+    height: 250px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    overflow: hidden;
+  }
+  .game-card:hover {
+    transform: scale(1.05);
+  }
+  .game-cover {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  .game-title {
+    font-size: 18px;
+    color: black;
+    margin: 10px 0;
+  }
+  .game-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* Gaya untuk Komunitas Section */
+.community-section {
+    padding: 20px;
+    background-color: #2d2d46;
+    margin: 20px;
+    border-radius: 5px;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.community-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* Memastikan elemen dimulai dari kiri */
+}
+
+.community-card {
+    background: #e6e6ef;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 190px;
+    height: 250px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.community-card:hover {
+    transform: scale(1.05);
+}
+
+.community-cover {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.community-title {
+    font-size: 17px;
+    color: black;
+    margin: 10px 0;
+}
+
+/* Gaya untuk Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c1c29;
+    color: white;
+    margin-top: 20px;
+}
+
+.banner {
+    background-image: url("banner2.jpeg");
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* overlay */
+    z-index: 0;
+}
+
+.banner h1 {
+    font-size: 48px;
+    font-style: bold;
+    z-index: 2;
+    color: #f0c040;
+}
+.banner h2 {
+    font-size: 40px;
+    z-index: 2;
+    color: #f0c040;
+}
+
+.banner p {
+    font-size: 20px;
+    margin: 20px 0;
+    z-index: 2;
+    max-width: 800px;
+    color: white !important;
+}
+
+/* Animasi tulisan di dalam banner */
+@keyframes slideIn {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .banner h1, .banner h2, .banner p {
+    animation: slideIn 1s ease-out forwards;
+  }
+  
+  .banner h1 {
+    animation-delay: 0.2s;
+  }
+  
+  .banner h2 {
+    animation-delay: 0.4s;
+  }
+  
+  .banner p {
+    animation-delay: 0.6s;
+  }
+  
+
+/* Efek blur di bagian bawah banner */
+.banner {
+  background-image: url("banner2.jpeg");
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Pastikan tidak ada overflow */
+
+  /* Tambahkan efek blur bagian bawah */
+  mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Slight overlay to darken banner */
+  backdrop-filter: blur(3px); /* Efek blur di bagian bawah */
+  z-index: 0;
+}
+
+/* Pastikan teks tidak terpengaruh blur */
+.banner h1, .banner h2, .banner p {
+  position: relative;
+  z-index: 1;
+  color: #f0c040;
+}
+
+

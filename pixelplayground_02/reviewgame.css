@@ -1,0 +1,430 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e2e;
+  margin: 0;
+  padding: 0;
+}
+
+.game-review-page {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.game-header {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-img {
+  display: flex;
+  width: 100%;
+  transition: 3s;
+}
+
+.game-img img {
+  max-width: 100%;
+  /* Adjust the maximum width as needed */
+  height: auto;
+}
+
+.image img {
+  width: 100%;
+}
+
+.image video {
+  width: 100%;
+}
+
+.wrapper {
+  width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+#slide-1:target~.game-img {
+  margin-left: 0px;
+}
+
+#slide-2:target~.game-img {
+  margin-left: -100%;
+}
+
+#slide-3:target~.game-img {
+  margin-left: -200%;
+}
+
+.navigation a {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-color: #dedede;
+  font-size: 0px;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+.navigation a:hover {
+  background-color: #666;
+  transition: 0.3s;
+}
+
+.navigation {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 220px;
+  right: 0;
+  margin-top: -35px;
+}
+
+@media screen and (max-width:500px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+.game-info {
+  width: 50%;
+}
+
+.game-info h1 {
+  font-size: 32px;
+  color: #4c4c75;
+}
+
+.game-info p {
+  color: #555;
+}
+
+.game-genres {
+  margin: 10px 0;
+}
+
+.genre {
+  display: inline-block;
+  background-color: #77eb77;
+  padding: 1px 5px;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.genre:hover {
+  background-color: #55d955;
+}
+
+.game-buttons {
+  margin: 20px 0;
+}
+
+.create-room,
+.play-now {
+  font-size: 17px;
+}
+
+.create-room {
+  width: 100%;
+}
+
+.play-now,
+.create-room {
+  display: block;
+  background-color: #e07293;
+  color: #fff;
+  padding: 5px 100px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.play-now:hover {
+  background-color: #c94e73;
+
+}
+
+.rating {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 12px 0;
+  cursor: default;
+  margin: auto;
+}
+
+.like,
+.dislike {
+  display: flex;
+  align-items: center;
+}
+
+.like span,
+.dislike span {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 9px;
+  background-color: #646499;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #58588d;
+}
+
+.tab.active {
+  background-color: #9f9fc0;
+}
+
+.tab-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 0;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane h2 {
+  margin-bottom: 20px;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.komen-wrapper {
+  background: white;
+  padding: 15px;
+  max-width: 100%;
+  width: 100%;
+  border-radius: .75rem;
+  box-shadow: gray;
+  text-align: center;
+  height: fit-content;
+}
+
+.wrapper h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1;
+  font-size: 25px;
+  color: gold;
+  margin-bottom: 2rem;
+}
+
+.rating .star {
+  cursor: pointer;
+}
+
+.star.active {
+  opacity: 0;
+  animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.star:hover {
+  transform: scale(1.1);
+}
+
+input {
+  width: 100%;
+  background: rgb(235, 235, 235);
+  padding: 1rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+.btn-group {
+  display: flex;
+  grid-gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.btn-group .btn {
+  padding: .75rem 1 rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+  justify-content: space-between;
+}
+
+.btn-send,
+.btn-cancel {
+  display: block;
+  padding: 5px 30px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-send {
+  background: #e07293;
+  color: white;
+}
+
+.btn-send:hover {
+  background-color: #c94e73;
+}
+
+.btn-cancel {
+  background: #646499;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #58588d;
+}
+
+.player-profile {
+  width: 50px;
+  /* Sesuaikan lebar profil */
+  height: 50px;
+  margin-right: 10px;
+}
+
+.player-profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.join-community {
+  display: block;
+  margin-top: 20px;
+  background-color: #e07293;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.join-community:hover {
+  background-color: #c94e73;
+}
+
+/* Styling untuk typing bar */
+/* Styling untuk typing bar dengan margin lebih */
+.typing-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 65px;
+  /* Menambahkan margin lebih untuk menurunkan typing bar */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* Mengatur posisi relatif agar tidak melayang di atas konten */
+}
+
+
+.typing-input {
+  width: 85%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.typing-input::placeholder {
+  color: #999;
+}
+
+.submit-btn {
+  width: 12%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}

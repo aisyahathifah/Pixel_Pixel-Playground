@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Game - Minecraft</title>
+  <link rel="stylesheet" href="reviewgame.css">
+  <link rel="stylesheet" href="navstyle2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+</head>
+
+<body>
+  <!-- Bagian Navigasi -->
+  <nav class="nav container">
+    <img src="LogoPP.png" class="img_logo">
+    <a href="home.html" class="nav__logo">Pixel Playground</a>
+
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="home2.html" class="nav__link">Home</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="pilihgame.html" class="nav__link">Game</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="pilihkomunitas.html" class="nav__link">Community</a>
+        </li>
+
+        <!-- Close button -->
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+    </div>
+
+    <div class="nav__actions">
+      <!-- Search button -->
+      <i class="ri-search-line nav__search" id="search-btn"></i>
+
+      <!-- Login button -->
+      <img src="pp02.png" class="user-pic" onclick="toggleMenu()">
+
+      <div class="sub-menu-wrap" id="subMenu" onmouseleave="closeMenu()">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="pp02.png">
+            <h2>kobskuy_beat</h2>
+          </div>
+          <hr>
+
+          <a href="profile_01.html" class="sub-menu-link">
+            <p>Edit Profile</p>
+            <span>></span>
+          </a>
+          <a href="home.html" class="sub-menu-link">
+            <p>Log Out</p>
+            <span>></span>
+          </a>
+        </div>
+                  
+      </div>
+
+      <!-- Toggle button -->
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="search" id="search">
+    <form action="" class="search__form">
+      <i class="ri-search-line search__icon"></i>
+      <input type="search" placeholder="What are you looking for?" class="search__input">
+    </form>
+
+    <i class="ri-close-line search__close" id="search-close"></i>
+  </div>
+
+  <script src="navmain.js"></script>
+
+  <!--Review Game-->
+
+  <section class="game-review-page">
+    <div class="game-header">
+      <div class="wrapper">
+        <div class="slides">
+          <span id="slide-1"></span>
+          <span id="slide-2"></span>
+          <span id="slide-3"></span>
+          <div class="game-img">
+            <img src="minecraft3.jpg" alt="Game minecraft1" class="game-image">
+            <img src="minecraft1.jpg" alt="Game minecraft2" class="game-image">
+            <img src="minecraft2.jpg" alt="Game minecraft3" class="game-image">
+          </div>
+          <div class="navigation">
+            <a href="#slide-1">1</a>
+            <a href="#slide-2">2</a>
+            <a href="#slide-3">3</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-info">
+        <h1>Minecraft</h1>
+        <p>Mojang Studios</p>
+        <p>Usia 7+</p>
+        <div class="game-genres">
+          <span class="genre">Game Survival</span>
+          <span class="genre">Game Action-Adventure</span>
+        </div>
+        <div class="game-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe" target="_blank"
+            class="play-now">Mainkan Sekarang</a>
+          <a href="#" class="create-room">Buat Room Mabar</a>
+        </div>
+        <div class="rating">
+          <div class="like">
+            <span>👍</span>
+            <p>87</p>
+          </div>
+          <div class="dislike">
+            <span>👎</span>
+            <p>3</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-details">
+      <nav class="tabs">
+        <button class="tab active" data-tab="about">About</button>
+        <button class="tab" data-tab="comments">Komentar</button>
+        <button class="tab" data-tab="community">Komunitas</button>
+      </nav>
+
+      <div class="tab-content">
+        <div class="tab-pane active" id="about">
+          <h2>Deskripsi Game</h2>
+          <p>Minecraft adalah sebuah permainan video sandbox yang dikembangkan oleh Mojang Studios. Pemain dapat
+            menjelajahi dunia blok yang luas, membangun berbagai struktur, serta bertahan hidup melawan monster.</p>
+        </div>
+
+        <div class="tab-pane" id="comments">
+          <h2>Komentar</h2>
+          <div class="comments-list" id="comments-list">
+            <div class="comment">
+              <div class="player-profile">
+                <img src="pp05.png" alt="Foto Profil Player 1">phoenix.ashes
+              </div>
+              <div class="comment-content">
+                <p>"Game ini sangat seru, terutama untuk mabar!"</p>
+              </div>
+            </div>
+          </div>
+          <div class="typing-bar">
+            <input type="text" placeholder="Tambahkan komentar Anda..." class="typing-input" id="comment-input">
+            <button class="submit-btn" id="submit-comment">Send</button>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="community">
+          <h2>Komunitas</h2>
+          <p>Bergabung dengan komunitas Minecraft di Pixel Playground untuk berdiskusi, berbagi tips, dan menemukan
+            teman bermain.</p>
+          <a href="roomkomunitas.html" class="join-community">Gabung Komunitas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="reviewgame.js"></script>
+  <script>
+    document.getElementById('submit-comment').addEventListener('click', function () {
+      const commentInput = document.getElementById('comment-input');
+      const commentsList = document.getElementById('comments-list');
+
+      if (commentInput.value.trim() !== '') {
+        const newComment = document.createElement('div');
+        newComment.classList.add('comment');
+
+        newComment.innerHTML = `
+          <div class="player-profile">
+            <img src="pp02.png" alt="Foto Profil"> You
+          </div>
+          <div class="comment-content">
+            <p>"${commentInput.value}"</p>
+          </div>
+        `;
+
+        commentsList.appendChild(newComment);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Playground - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="navstyle2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+</head>
+
+<body>
+    <!-- Bagian Navigasi -->
+    <nav class="nav container">
+        <img src="LogoPP.png" class="img_logo">
+        <a href="home.html" class="nav__logo">Pixel Playground</a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="home2.html" class="nav__link">Home</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="pilihgame.html" class="nav__link">Game</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="pilihkomunitas.html" class="nav__link">Community</a>
+                </li>
+        </div>
+
+        <div class="nav__actions">
+
+            <!-- Login button -->
+            <img src="pp02.png" class="user-pic" onclick="toggleMenu()">
+
+            <div class="sub-menu-wrap" id="subMenu" onmouseleave="closeMenu()">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="pp02.png">
+                        <h2>kobskuy_beat</h2>
+                    </div>
+                    <hr>
+
+                    <a href="profile_01.html" class="sub-menu-link">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="home.html" class="sub-menu-link">
+                        <p>Log Out</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+    </nav>
+    <script src="navmain.js"></script>
+
+    <body>
+        <!-- Bagian Review Game -->
+        <section class="review-section">
+            <div class="game-grid">
+                <h2>Review Game</h2>
+                <div class="game-card">
+                    <a href="kasih rating.html">
+                        <div class="game-cover">
+                            <img src="minecraft3.jpg" alt="Minecraft" class="game-cover">
+                            <h2 class="game-title">Minecraft</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="game-card">
+                    <a href="">
+                        <div class="game-cover">
+                            <img src="freefire.png" alt="Minecraft" class="game-cover">
+                            <h2 class="game-title">Free Fire</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="game-card">
+                    <a href="">
+                        <div class="game-cover">
+                            <img src="amongus.png" alt="Minecraft" class="game-cover">
+                            <h2 class="game-title">Among Us</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="game-card">
+                    <a href="">
+                        <div class="game-cover">
+                            <img src="mobilelegend.png" alt="Minecraft" class="game-cover">
+                            <h2 class="game-title">Mobile Legends</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="game-card">
+                    <a href="">
+                        <div class="game-cover">
+                            <img src="callofduty02.jpeg" alt="Minecraft" class="game-cover">
+                            <h2 class="game-title">Call of Duty</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Tambahkan game lainnya sesuai kebutuhan -->
+        </section>
+
+        <!-- Bagian Komunitas -->
+        <section class="community-section">
+            <h2>Game Community</h2>
+            <div class="community-grid">
+                <div class="community-card">
+                    <a href="https://discord.gg/UnfYZV62">
+                        <img src="minecraft5.jpeg" alt="Komunitas Minecraft" class="community-cover">
+                        <h2 class="community-title">Minecraft Community</h2>
+                    </a>
+                </div>
+                <div class="community-card">
+                    <a href="">
+                        <img src="mobilelegend02.jpeg" alt="Komunitas Mobile Legends" class="community-cover">
+                        <h2 class="community-title">Mobile Legends Squad</h2>
+                    </a>
+                </div>
+                <div class="community-card">
+                    <a href="">
+                        <img src="freefire02.jpeg" alt="Komunitas Mobile Legends" class="community-cover">
+                        <h2 class="community-title">Free Fire Fighters</h2>
+                    </a>
+                </div>
+                <div class="community-card">
+                    <a href="">
+                        <img src="amongus02.jpeg" alt="Komunitas Mobile Legends" class="community-cover">
+                        <h2 class="community-title">Whos's Among Us?</h2>
+                    </a>
+                </div>
+                <div class="community-card">
+                    <a href="">
+                      <img src="callofduty02.jpeg" alt="Komunitas Mobile Legends" class="community-cover">
+                      <h2 class="community-title">Call of Duty Fighters</h2>
+                    </a>
+                  </div>
+                <!-- Tambahkan lebih banyak komunitas sesuai kebutuhan -->
+            </div>
+        </section>
+
+
+        <footer>
+            <p>&copy; 2024 Pixel Playground. All rights reserved.</p>
+        </footer>
+
+        <script src="reviewgame.js"></script>
+        <script>
+            let subMenu = document.getElementById("subMenu");
+
+            function toggleMenu() {
+                subMenu.classList.toggle("open-menu");
+            }
+
+            function closeMenu() {
+                subMenu.classList.remove("open-menu");
+            }
+        </script>
+    </body>
+
+</html>

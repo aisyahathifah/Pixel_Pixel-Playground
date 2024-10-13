@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Playground - Home</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="navstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+</head>
+
+<body>
+  <!-- Bagian Navigasi -->
+  <nav class="nav container">
+    <img src="LogoPP.png" class="img_logo">
+    <a href="home.html" class="nav__logo">Pixel Playground</a>
+
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="home.html" class="nav__link">Home</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="login.html" class="nav__link">Game</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="login.html" class="nav__link">Community</a>
+        </li>
+
+        <!-- Close button -->
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+    </div>
+
+    <div class="nav__actions">
+      <!-- Search button -->
+      <i class="ri-search-line nav__search" id="search-btn"></i>
+
+      <!-- Login button -->
+      <a href="login.html" class="ri-user-line nav__login" id="login-btn"></a>
+
+      <!-- Toggle button -->
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="search" id="search">
+    <form action="" class="search__form">
+      <i class="ri-search-line search__icon"></i>
+      <input type="search" placeholder="What are you looking for?" class="search__input">
+    </form>
+
+    <i class="ri-close-line search__close" id="search-close"></i>
+  </div>
+
+  <script src="navmain.js"></script>
+
+  <header>
+    <div class="banner">
+      <h1>Pixel Playground: </h1>
+      <h2>Your Gateway to Gaming Adventures!</h2>
+      <p>Join Pixel Playground and explore a world of game reviews, community discussions, and team-based gaming
+        sessions. Start your journey now!</p>
+    </div>
+  </header>
+
+
+  <!-- Bagian Teman -->
+
+
+  <!-- Bagian Review Game -->
+  <section class="review-section">
+    <div class="game-grid">
+      <h2>Review Game</h2>
+      <div class="game-card">
+        <a href="login.html">
+          <div class="game-cover">
+            <img src="minecraft3.jpg" alt="Minecraft" class="game-cover">
+            <h2 class="game-title">Minecraft</h2>
+          </div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="login.html">
+          <div class="game-cover">
+            <img src="freefire.png" alt="Minecraft" class="game-cover">
+            <h2 class="game-title">Free Fire</h2>
+          </div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="login.html">
+          <div class="game-cover">
+            <img src="amongus.png" alt="Minecraft" class="game-cover">
+            <h2 class="game-title">Among Us</h2>
+          </div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="login.html">
+          <div class="game-cover">
+            <img src="mobilelegend.png" alt="Minecraft" class="game-cover">
+            <h2 class="game-title">Mobile Legends</h2>
+          </div>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="">
+            <div class="game-cover">
+                <img src="callofduty02.jpeg" alt="Minecraft" class="game-cover">
+                <h2 class="game-title">Call of Duty</h2>
+            </div>
+        </a>
+    </div>
+
+      <!-- Tambahkan game lainnya sesuai kebutuhan -->
+  </section>
+
+  <!-- Bagian Komunitas -->
+  <section class="community-section">
+    <h2>Game Community</h2>
+    <div class="community-grid">
+      <div class="community-card">
+        <a href="login.html">
+          <img src="minecraft5.jpeg" alt="Komunitas Minecraft" class="community-cover">
+          <h2 class="community-title">Minecraft Community</h2>
+        </a>
+      </div>
+      <div class="community-card">
+        <a href="login.html">
+          <img src="mobilelegend02.jpeg" alt="Komunitas Mobile Legends" class="community-cover">
+          <h2 class="community-title">Mobile Legends Squad</h2>
+        </a>
+      </div>
+      <div class="community-card">
+        <a href="login.html">
+          <img src="freefire02.jpeg" alt="Komunitas Mobile Legends" class="community-cover">
+          <h2 class="community-title">Free Fire Fighters</h2>
+        </a>
+      </div>
+      <div class="community-card">
+        <a href="">
+          <img src="amongus02.jpeg" alt="Komunitas Mobile Legends" class="community-cover">
+          <h2 class="community-title">Whos's Among Us?</h2>
+        </a>
+      </div>
+      <div class="community-card">
+        <a href="">
+          <img src="callofduty02.jpeg" alt="Komunitas Mobile Legends" class="community-cover">
+          <h2 class="community-title">Call of Duty Fighters</h2>
+        </a>
+      </div>
+      <!-- Tambahkan lebih banyak komunitas sesuai kebutuhan -->
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2024 Pixel Playground. All rights reserved.</p>
+  </footer>
+
+  <script src="reviewgame.js"></script>
+</body>
+
+</html>

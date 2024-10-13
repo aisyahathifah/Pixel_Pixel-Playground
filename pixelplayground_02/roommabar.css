@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+
+body {
+    font-family: monospace, fantasy;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e2e;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Chat Container */
+.chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #2c2166;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.chat-header .room-info {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.chat-header .room-info h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.chat-header .leave-btn {
+    background-color: #bd3f31;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.chat-header .leave-btn:hover {
+    background-color: #b8574c;
+}
+
+/* Chat Messages */
+.chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #1e1e2e;
+}
+
+/* Main content wrapper to fit with sidebar and navbar */
+.main-content {
+    display: flex;
+    flex-grow: 1;
+}

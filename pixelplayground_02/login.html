@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css" />
+    <title>Sign in & Sign up Form</title>
+</head>
+<script>
+    // Function to handle login
+    function Login(event) {
+        event.preventDefault();
+        var user = document.getElementById("username").value;
+        var pass = document.getElementById("password").value;
+
+        // Check against stored username and password in localStorage
+        var storedUser = localStorage.getItem("username");
+        var storedPass = localStorage.getItem("password");
+
+        if (user === storedUser && pass === storedPass) {
+            alert("Selamat anda berhasil login");
+            window.location.href = "home2.html"; // Redirect to home page
+        } else {
+            alert("Username dan password anda salah!");
+        }
+    }
+     // Function to handle sign up
+     function SignUp(event) {
+            event.preventDefault();
+            var newUser = document.getElementById("new-username").value;
+            var newPass = document.getElementById("new-password").value;
+
+            // Save the new username and password to localStorage
+            localStorage.setItem("username", newUser);
+            localStorage.setItem("password", newPass);
+
+            alert("Akun berhasil dibuat, silakan login.");
+            // Switch back to sign-in form
+            document.getElementById("sign-up-form").style.display = "none";
+            document.getElementById("sign-in-form").style.display = "block";
+        }
+
+        // Show Sign Up Form
+        document.getElementById("sign-up-btn").addEventListener("click", function() {
+            document.getElementById("sign-in-form").style.display = "none";
+            document.getElementById("sign-up-form").style.display = "block";
+        });
+
+        // Show Sign In Form
+        document.getElementById("sign-in-btn").addEventListener("click", function() {
+            document.getElementById("sign-up-form").style.display = "none";
+            document.getElementById("sign-in-form").style.display = "block";
+        });
+</script>
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form class="sign-in-form">
+                    <h2 class="title">Sign in</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" placeholder="Username" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Password" />
+                    </div>
+                    <input type="submit" value="Login" onclick="Login(event)" class="btn solid" />
+                </form>
+                <form action="#" class="sign-up-form" id="sign-up-form">
+                    <h2 class="title">Sign up</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="new-username" placeholder="Username" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="new-password" placeholder="Password" />
+                    </div>
+                    <input type="submit" value="Create Account" onclick="SignUp(event)" class="btn solid" />
+                </form>
+        </div>
+    </div>
+</body>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Belum Memiliki Akun?</h3>
+                    <p>
+                        Selamat datang di Pixel Playground, silahkan klik tombol Sign Up
+                        jika belum memiliki akun
+                    </p>
+                    <button class="btn transparent" id="sign-up-btn">
+                        Sign up
+                    </button>
+                </div>
+                <img src="signup.svg" class="image" alt="" />
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Anda Sudah Memiliki Akun?</h3>
+                    <p>
+                        Jika sudah, silahkan klik tombol Sign In lalu Login untuk mengakses Pixel Playground
+                    </p>
+                    <button class="btn transparent" id="sign-in-btn">
+                        Sign in
+                    </button>
+                </div>
+                <img src="signin.svg" class="image" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
